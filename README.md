@@ -35,3 +35,11 @@ Informações detalhadas podem ser encontradas na documentação oficial.
 
 2.1. Termos
 API Gateway é um serviço da AWS que oferece suporte à criação, implantação e gerenciamento de uma interface de programação de aplicativo RESTful para expor endpoints HTTP de back-end, funções do AWS Lambda e outros serviços da AWS.
+
+Uma API Gateway API é uma coleção de recursos e métodos que podem ser integrados com funções Lambda, outros serviços AWS ou endpoints HTTP no back-end. A API consiste em recursos que formam a estrutura da API. Cada recurso de API pode expor um ou mais métodos de API que devem ter verbos HTTP exclusivos.
+
+Para publicar uma API, temos que criar uma implementação de API e associá-la a um assim chamado estágio. Um estágio é como um instantâneo no tempo da API. Se reimplantarmos uma API, podemos atualizar um estágio existente ou criar um novo. Com isso, diferentes versões de uma API ao mesmo tempo são possíveis, por exemplo, um estágio de desenvolvimento, um estágio de teste e até mesmo várias versões de produção, como v1, v2, etc.
+
+A integração do Lambda Proxy é uma configuração simplificada para a integração entre as funções do Lambda e o API Gateway.
+
+O API Gateway envia a solicitação inteira como uma entrada para uma função Lambda de back-end. Em termos de resposta, o API Gateway transforma a saída da função Lambda de volta em uma resposta HTTP de front-end.
